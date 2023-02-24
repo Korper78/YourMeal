@@ -1,10 +1,11 @@
+import { API_URI } from "../../const"
 import { Count } from "../Count/Count"
 import style from './OrderGoods.module.css'
 
 export const OrderGoods = ({item}) => {
     return (
     <li className={style.item}>
-        <img className={style.image} src="img/burger_1.jpg" alt={item} />
+        <img className={style.image} src={`${API_URI}/img/burger_1.jpg`} alt={item} />
 
         <div className={style.goods}>
           <h3 className={style.title}>{item}</h3>
