@@ -18,9 +18,10 @@ const initialState = {
 };
 
 export const categoryRequestAsync = createAsyncThunk(
-  'category/fetch',   () => fetch(`${API_URI}${POSTFIX}/category`)
-    .then(req => req.json())
-    .catch(error => ({error}))
+  'category/fetch', () =>
+    fetch(`${API_URI}${POSTFIX}/category`)
+      .then(req => req.json())
+      .catch(error => ({error}))
 );
 
 const categorySlice = createSlice({
