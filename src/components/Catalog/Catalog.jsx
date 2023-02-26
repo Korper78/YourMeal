@@ -27,7 +27,7 @@ export const Catalog = () => {
                 <li key={item.id} className={style.item}>
                   <CatalogProduct item={item}/>
               </li>
-              )) : 'В этой категории пока нет товаров'}
+              )) : 'В этой категории пока нет товаров((('}
             </ul>
           </div>
         </div>
