@@ -7,7 +7,8 @@ const initialState = {
 };
 
 export const productRequestAsync = createAsyncThunk(
-  'product/fetch', category => fetch(`${API_URI}${POSTFIX}?category=${category}`)
+  'product/fetch', 
+  async category => fetch(`${API_URI}${POSTFIX}?category=${category}`)
     .then(req => req.json())
     .catch(error => ({error}))
 );
